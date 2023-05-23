@@ -3,6 +3,10 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
   }
   
   /* Style the navbar */
@@ -11,44 +15,117 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #be3144;
     color: #fff;
   }
   
   #navbar nav {
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
+    justify-content: flex-end;
   }
   
+  #navbar nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+
+
+  #navbar nav ul li a:hover{
+    background-color: #45567d;
+  }
+
   #navbar a {
     color: #fff;
     text-decoration: none;
+    padding: 1.4rem;
+    margin-right: 20px;
   }
+
   
   /* Style the welcome section */
   
   #welcome-section {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
   }
   
   #welcome-section h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-align: center;
+    color: white;
+    margin-bottom: -3px;
+    
   }
   
+  #welcome-section p {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #be3144;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+  }
   /* Style the project section */
-  
+
+  .projects-section{
+    text-align: center;
+    background: #45567d;
+    padding: 10rem 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+}
+
+  .projects-section-header{
+    border-bottom:1px solid white;
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    color: white;
+    padding-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  .projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+ 
+  .projects-grid a{
+    text-decoration: none;
+    background-color: #303841;
+    color: white;
+  }
+
+  .projects-grid a img{
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+  }
+
+
   #projects {
     padding: 20px;
   }
-  
-  .project-tile {
-    background-color: #e8e8e8;
+  span{
+    color: white;
+    transition: color 0.3s ease-out;
+  }
+
+  .project-title {
+    color: #e8e8e8;
     padding: 20px;
     margin-bottom: 20px;
   }
@@ -62,6 +139,58 @@ body {
     margin-top: 10px;
   }
   
+
+  .btn-show-all{
+    font-size: 2rem;
+    background: #303841;
+  }
+
+  .btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+
+
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: #303841;
+    color: white;
+}
+
+.contact-section-header h2{
+  font-size: 2.5em;
+  margin-bottom: -10px;
+  font-style: italic;
+}
+
+
+.contact-section-header p{
+  font-size: 0.8em;
+  margin-bottom: 50px;
+}
+
+footer{
+font-weight: 300;
+display: flex;
+justify-content: space-evenly;
+padding: 2rem;
+background: #303841;
+border-top: 4px solid #be3144;
+color: white;
+}
+
+footer p{
+  font-size: 0.8em;
+}
   /* Media query for smaller screens */
   
   @media (max-width: 600px) {
